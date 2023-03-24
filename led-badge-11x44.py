@@ -520,7 +520,7 @@ if have_pyhidapi:
 else:
   for i in range(int(len(buf)/64)):
     time.sleep(0.1)
-    dev.write(1, buf[i*64:i*64+64])
+    dev.write(2, buf[i*64:i*64+64])
 
 if have_pyhidapi:
   pyhidapi.hid_close(dev)
